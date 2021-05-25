@@ -1,0 +1,95 @@
+@import "fonts";
+@import "mq";
+@import "palette";
+@import "enhancer";
+@import "autocomplete";
+
+.interactive-atom {
+    margin: 0;
+    padding: 0;
+}
+
+.map-red{fill:#C70000;fill-opacity:1;stroke:#FFFFFF;color:#C70000;stroke-width:0.5px;}
+.map-amber{fill:#F5BE2C;fill-opacity:1;stroke:#FFFFFF;color:#F5BE2C;stroke-width:0.5px;}
+.map-green{fill:#2BADBC;fill-opacity:1;stroke:#FFFFFF;color:#2BADBC;stroke-width:0.5px;}
+.map-no-match{fill:#DADADA;fill-opacity:1;stroke:#FFFFFF;color:#DADADA;stroke-width:0.5px;}
+.map-common{fill:#DADADA;fill-opacity:1;stroke:#FFFFFF;color:#DADADA;stroke-width:0.5px;}
+
+.map-search-box{
+    max-width: 460px;
+   display: -webkit-flex;
+    display: flex;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    height: 3rem;
+
+    margin: 0;
+    padding: 0 2rem 0 3.2rem;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 1rem;
+    
+    border-radius: 10rem;
+    
+    border: 1px solid #dcdcdc;
+    background-image: url("<%= path %>/icon-spyglass.svg");
+    background-size: 1.4rem;
+    background-position: left 1.05rem top .8rem;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-color: #fff;
+
+    margin-bottom:8px;
+
+    .map-search-cancel{
+        display: inline;
+        cursor: pointer;
+        box-sizing: content-box;
+
+        align-self:center;
+
+        opacity: 0;
+
+    }
+    
+}
+
+.over{
+    stroke: #333333;
+    stroke-width:1.5px;
+}
+
+.tooltip-map-list{
+        pointer-events: none;
+        min-width:150px;
+        max-width: 300px;
+        height: max-content;
+        padding:8px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid #333;
+        color: #333333;
+        border-top: 1px solid #333;
+        position: absolute;
+        z-index: 100000;
+        line-height: 18.2px;
+        cursor: pointer;
+
+        opacity:0;
+
+        &.over{
+            opacity: 1;
+        }
+
+        font-size: 14px;
+
+        @include fs-header(3);
+}
+
+.map-source{
+    @include fs-textSans(1);
+    color: #767676;
+    font-size: 12px;
+
+    border-bottom: 1px solid #dcdcdc;
+}

@@ -1,0 +1,42 @@
+<div class="interactive-wrapper-scatterplot">
+
+
+	<div class="light-search-box">
+		<input id="autoComplete" type="text" dir="ltr" spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="none" maxlength="2048" tabindex="1" role="combobox" aria-haspopup="true" aria-expanded="false" aria-controls="autoComplete_list" aria-autocomplete="both" placeholder="Search by country">
+		<img class="search-cancel" src="<%= path %>/icon-cancel.svg">
+	</div>
+	
+	<div class="gv-arrow-y">
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5px 24.9px" width="5px" height="20px" style="enable-background:new 0 0 5 24.9;" xml:space="preserve"> <polygon points="5,4.3 2.5,0 0,4.3 2,4.3 2,24.9 3,24.9 3,4.3 "/>
+		</svg>
+
+		<span class="gv-axis-text">Cases per 1m (last fortnight)</span>
+
+	</div>
+
+
+	<div class="scatterplot-container">
+		<div class='tooltip-countries-list'>
+			<div class='tooltip-header'></div>
+			<div class='tooltip-content'>
+				<div class='tooltip-cases'></div>
+				<div class='tooltip-vaccines'></div>
+				<div class='tooltip-visitors'></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="gv-arrow-x">
+		<div class="gv-left-arrow">
+			<span class="gv-axis-text">Vaccine doses per 100 people to date</span>
+
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24.9px 5px" width="24.9px" height="5px" style="enable-background:new 0 0 24.9 5;" xml:space="preserve">
+				<polygon points="24.9,2.5 20.6,0 20.6,2 0,2 0,3 20.6,3 20.6,5 "/>
+			</svg>
+		</div>
+	</div>
+
+	<div class='scatterplot-source'>Source: Johns Hopkins University, Our World in Data. Note: The figures relate to individual doses of vaccine, not people vaccinated. Since the intent is usually to give each person two doses, these figures do not represent a percentage of the population. Numbers as reported by individual countries. Dots sized by the number of 2019 UK visitors. Cases rates on a logarithmic scale.</div>
+
+
+</div>

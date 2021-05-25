@@ -1,0 +1,180 @@
+@import "fonts";
+@import "mq";
+@import "palette";
+@import "enhancer";
+@import "autocomplete";
+
+.interactive-atom {
+    margin: 0;
+    padding: 0;
+    background:#fff;
+}
+
+.interactive-wrapper-scatterplot{
+	background:#ffffff;
+}
+
+.sc-red{fill:#C70000;fill-opacity:.3;stroke:#C70000;color:#C70000;}
+.sc-amber{fill:#F5BE2C;fill-opacity:.3;stroke:#F5BE2C;color:#F5BE2C;}
+.sc-green{fill:#2BADBC;fill-opacity:.8;stroke:#2BADBC;color:#2BADBC;}
+.sc-no-match{fill:#DADADA;fill-opacity:.3;stroke:#DADADA;color:#DADADA;}
+
+.selected-red{fill:#C70000;}
+.selected-amber{fill:#F5BE2C;}
+.selected-green{fill:#2BADBC;}
+.selected-no-match{fill:#DADADA;}
+
+.light-search-box{
+    max-width: 460px;
+   display: -webkit-flex;
+    display: flex;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    height: 3rem;
+
+    margin: 0;
+    padding: 0 2rem 0 3.2rem;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 1rem;
+    
+    border-radius: 10rem;
+    
+    border: 1px solid #dcdcdc;
+    background-image: url("<%= path %>/icon-spyglass.svg");
+    background-size: 1.4rem;
+    background-position: left 1.05rem top .8rem;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-color: #fff;
+
+    .search-cancel{
+        display: inline;
+        cursor: pointer;
+        box-sizing: content-box;
+
+        align-self:center;
+
+        opacity: 0;
+
+    }
+    
+}
+
+
+
+.yaxis text, .xaxis text {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Guardian Text Egyptian Web",Georgia,serif;
+    fill: #767676;
+}
+
+.yaxis line{
+    stroke-width: 2px;
+    stroke: #bababa;
+    stroke-dasharray: 0,4;
+    stroke-linecap: round;
+}
+
+.xaxis line{
+    stroke-width: 2px;
+    stroke: #bababa;
+}
+
+.yaxis .tick{
+
+     text-anchor:start;
+}
+
+.yaxis .domain, .xaxis .domain{
+    display: none;
+}
+
+.tooltip-countries-list{
+		pointer-events: none;
+		min-width:150px;
+		max-width: 350px;
+		height: max-content;
+		padding:8px;
+		background: rgba(255, 255, 255, 0.9);
+		border: 1px solid #333;
+		color: #333333;
+		border-top: 1px solid #333;
+		position: absolute;
+		z-index: 100000;
+		line-height: 18.2px;
+		cursor: pointer;
+
+		opacity:0;
+
+		&.over{
+			opacity: 1;
+		}
+
+		font-size: 14px;
+}
+
+.tooltip-header{
+	@include fs-header(3);
+}
+
+.tooltip-content{
+
+	margin-top: 8px;
+
+	div:not(:last-child){
+		border-bottom: 2px dotted #b3b3b3;
+		height:20px;
+	}
+}
+
+.gv-arrow-x, .gv-arrow-y{
+    display: flex;
+    @include fs-textSans(3);
+    color: #333;
+    font-weight: 900;
+}
+
+
+.gv-arrow-x{
+    justify-content: flex-end;
+
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.gv-arrow-y {
+	margin-top: 8px;
+	svg{
+		margin-right: 5px;
+	}
+    
+}
+
+.gv-left-arrow{
+
+
+    display: flex;
+    align-items: center;
+
+    svg{
+        margin-right: 5px;
+    }
+
+    span{
+        margin-right: 5px;
+    }
+
+}
+
+.gv-right-arrow{
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    svg{
+        margin-left: 5px;
+    }
+}
